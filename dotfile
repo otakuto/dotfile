@@ -1,13 +1,12 @@
-mkdir -p work/git
+mkdir -p ~/work/git
 
-cd "$_"
-git clone http://github.com/otakuto/.vimrc
-git clone http://github.com/otakuto/.zshrc
-git clone http://github.com/otakuto/.tmux.conf
+cd ~/work/git
+git clone http://github.com/otakuto/.vimrc &
+git clone http://github.com/otakuto/.zshrc &
+git clone http://github.com/otakuto/.tmux.conf &
+wait
 
 cd
 ln -s ~/work/git/.vimrc/.vimrc .
 ln -s ~/work/git/.zshrc/.zshrc .
 ln -s ~/work/git/.tmux.conf/.tmux.conf .
-mkdir .zsh
-mkdir .vim
