@@ -1,0 +1,17 @@
+mkdir -p ~/work/git
+
+cd ~/work/git
+git clone http://github.com/otakuto/.xinitrc &
+git clone http://github.com/otakuto/.xmodmap &
+git clone http://github.com/otakuto/.xresources &
+git clone http://github.com/otakuto/xmonad.hs &
+wait
+
+cd
+ln -s ~/work/git/.xinitrc/.xinitrc .
+ln -s ~/work/git/.xmodmap/.xmodmap .
+ln -s ~/work/git/.xresources/.xresources .
+
+mkdir .xmonad
+cd .xmonad
+ln -s ~/work/git/xmonad.hs/xmonad.hs .
