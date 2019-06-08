@@ -1,0 +1,10 @@
+mkdir -p ~/work/git
+
+cd ~/work/git
+git clone http://github.com/otakuto/sway &
+wait
+
+cd
+mkdir -p .config/sway
+cd .config/sway
+ln -s ~/work/git/sway/config .
